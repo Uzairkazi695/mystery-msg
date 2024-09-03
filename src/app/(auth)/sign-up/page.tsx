@@ -32,7 +32,6 @@ export default function page() {
   const { toast } = useToast();
   const router = useRouter();
 
-  // useForm hook
   const form = useForm<z.infer<typeof signUpSchema>>({
     resolver: zodResolver(signUpSchema),
     defaultValues: {
@@ -80,7 +79,7 @@ export default function page() {
           title: "Success",
           description: "Sign up successful",
         });
-        router.replace(`/verify/${data.username}`);
+        router.replace(`/verify/${username}`);
         setIsSubmitting(false);
       } else {
         toast({
@@ -90,19 +89,23 @@ export default function page() {
         });
       }
     } catch (error) {
-      console.error("Error in signing up", error);
+      const axiosError = error as AxiosError<ApiResponse>;
+
+      let message = axiosError.response?.data.message;
+
       toast({
         title: "Error",
-        description: "Error occurred while signing up",
+        description: message,
         variant: "destructive",
       });
+      setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="flex justify-center items-center flex-col min-h-screen bg-gray-200">
+    <div className="flex justify-center items-center flex-col min-h-screen bg-gray-100">
       <div className="w-full max-w-md p-8 space-y-8 bg-white shadow-2xl rounded-lg">
-        <div>
+        <div className="text-center">
           <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl mb-6">
             Join True Feedback
           </h1>
