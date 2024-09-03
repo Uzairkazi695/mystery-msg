@@ -42,6 +42,8 @@ export async function GET(request: Request) {
     });
 
     if (existingVerifiedUser) {
+      console.log("existingVerifiedUser");
+      
       return Response.json(
         {
           success: false,
@@ -56,7 +58,7 @@ export async function GET(request: Request) {
         success: true,
         message: "Username is available",
       },
-      { status: 500 }
+      { status: 200 }
     );
   } catch (error) {
     console.log("Error checking username", error);
