@@ -79,6 +79,7 @@ export async function GET(request: Request) {
     }
 
     const userId = user._id;
+    console.log(userId);
 
     const foundUser = await UserModel.findById(userId);
 
@@ -95,7 +96,7 @@ export async function GET(request: Request) {
     return Response.json(
       {
         success: true,
-        isAcceptingMessages: foundUser.isAcceptingMessage,
+        isAcceptingMessage: foundUser.isAcceptingMessage,
       },
       { status: 200 }
     );

@@ -9,7 +9,7 @@ export async function middleware(request: NextRequest) {
 
   if (
     token &&
-    ["/sign-in", "/sign-up", "/verify", "/"].includes(url.pathname)
+    ["/sign-in", "/sign-up", "/verify"].includes(url.pathname)
   ) {
     return NextResponse.redirect(new URL("/dashboard", request.url));
   }
