@@ -12,7 +12,7 @@ import { useForm } from "react-hook-form";
 import { sendMessageSchema } from "@/schemas/sendMessageSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-export default function page() {
+export default function UserMessagePage() {
   const params = useParams();
   const username = params.username;
   const { toast } = useToast();

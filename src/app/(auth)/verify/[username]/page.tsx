@@ -19,7 +19,7 @@ import { useParams, useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-export default function page() {
+export default function VerifyPage() {
   const params = useParams<{ username: string }>();
   const router = useRouter();
   const { toast } = useToast();
