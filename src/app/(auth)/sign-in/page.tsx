@@ -38,7 +38,6 @@ export default function Signin() {
       password: data.password,
     });
     console.log(result);
-    
 
     if (result?.error) {
       toast({
@@ -95,6 +94,8 @@ export default function Signin() {
             </Button>
           </form>
         </Form>
+        <div>Demo Account: demo@gmail.com</div>
+        <div>Demo Password: 12345678</div>
       </div>
     </div>
   );
