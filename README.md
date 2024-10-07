@@ -1,37 +1,85 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Mystery Message Website
 
-First, run the development server:
+A **platform where users can receive anonymous messages** from anyone, ensuring a fun and mysterious interaction. Built with modern technologies to provide an engaging user experience.
+
+
+## Tech Stack
+
+- **Frontend**: Next.js, TailwindCSS, TypeScript, Shadcn
+- **Backend**: MongoDB
+- **AI Integration**: Gemini AI
+
+
+## Features
+
+- **Anonymous Messaging**: Users can send and receive messages without revealing their identity, fostering a fun and mysterious interaction.
+- **User-Friendly Interface**: Designed with **TailwindCSS** for a sleek and intuitive interface, enhancing user engagement.
+- **Real-Time Updates**: Utilizes **Next.js** for server-side rendering and real-time updates, ensuring a smooth experience.
+- **AI Integration**: Integrated **Gemini AI** to genrate random messages for user.
+- **Secure Data Management**: Implemented **MongoDB** for secure storage and management of messages and user data.
+
+## Screenshots
+
+![Homepage Screenshot](./public/home-page.png)
+![Message Interaction Screenshot](./public/message-page.png)
+![User Dashboard Screenshot](./public/dashboard-page.png)
+
+
+
+## Run Locally
+
+Clone the project
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/Uzairkazi695/mystery-msg.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Go to the project directory
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  cd mystery-msg
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Install dependencies
 
-## Learn More
+```bash
+  npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+Start the server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+  npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To run this project, you will need to add the following environment variables to your .env file
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# mystery-msg
+`MONGODB_URI `
+
+`RESEND_API_KEY `
+
+`NEXTAUTH_SECRET`
+
+`GEMINI_API_KEY`
+
+## Future Enhancements
+
+- **User Profiles**: Implement user profiles for a personalized experience.
+- **Message Filtering**: Add options to filter and categorize messages.
+
+
+
+## Contributing
+
+Contributions are always welcome!
+
+
+
+## License
+
+This project is licensed under the [MIT](https://choosealicense.com/licenses/mit/) License.
+
